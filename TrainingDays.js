@@ -14,9 +14,25 @@ const getTrainingDays = event => {
     if (event === 'Marathon') {
         days = 50;
     } else if (event === 'Triathalon') {
-        days = 1000;
+        days = 100;
     } else if (event === 'Pentathalon') {
         days = 200;
     }
     return days;
 }
+
+const name = 'Nala';
+
+const logEvent = (name, event) => {
+    console.log(`${name}'s event is ${event}`);
+}
+
+const logTime = (name, days) => {
+    console.log(`${name}'s time to train is: ${days}`);
+}
+
+const event = getRandEvent();
+const days = getTrainingDays(event);
+
+logEvent(name, event);
+logTime(name, days);
