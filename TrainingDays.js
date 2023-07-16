@@ -9,3 +9,14 @@ const getRandEvent = () => {
     }
 }
 
+const getTrainingDays = event => {
+    let days;
+    if (event === 'Marathon') {
+        days = 50;
+    } else if (event === 'Triathalon') {
+        days = 1000;
+    } else if (event === 'Pentathalon') {
+        days = 200;
+    }
+    return days;
+}
